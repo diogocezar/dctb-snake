@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Snake Game</title>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+  </head>
+  <body>
+    <div id="points"></div>
+    <canvas id="screen" width="10" height="10"></canvas>
+    <script type="module">
+      import createCore from "./js/core.js";
+      import createKeyboardListener from "./js/keyboardScreen.js";
+      import renderScreen from "./js/renderScreen.js";
+
+      const $screen = document.getElementById("screen");
+
+      const _core = createCore();
+      const _kbListener = createKeyboardListener(document, _core);
+      const _renderScreen = renderScreen($screen, _core);
+    </script>
+  </body>
+</html>
